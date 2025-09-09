@@ -1,4 +1,4 @@
-package list01.singleton.gamesession;
+package list01.singleton.gameSession;
 
 public class App {
     public static void main(String[] args) {
