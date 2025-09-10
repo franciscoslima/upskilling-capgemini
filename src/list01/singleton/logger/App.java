@@ -11,5 +11,7 @@ public class App {
         logger.debug("Debug Message");
         logger.error("Error Message");
         logger.warn("Warn Message");
+
+        logger.printLogFile();
     }
 }

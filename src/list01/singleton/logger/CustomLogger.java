@@ -1,8 +1,6 @@
 package list01.singleton.logger;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -54,5 +52,18 @@ public class CustomLogger {
 
     public void debug(String message) {
         log(LogLevel.DEBUG, message);
+    }
+
+    public void printLogFile() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(LOG_FILE))) {
+            String line;
+            System.out.println("==== Lof File Content ====");
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            System.out.println("==========================");
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read log file", e);
+        }
     }
 }
