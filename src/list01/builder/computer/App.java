@@ -16,7 +16,7 @@ public class App {
                 .motherBoard("motherBoard Two")
                 .build();
 
-        System.out.println(computerOne);
-        System.out.println(computerTwo);
+        computerOne.getConfigurations();
+        computerTwo.getConfigurations();
     }
 }

@@ -40,4 +40,8 @@ public class Computer {
     public void setHasCooler(boolean hasCooler) {
         this.hasCooler = hasCooler;
     }
+
+    public void getConfigurations() {
+        System.out.println(this);
+    }
 }
